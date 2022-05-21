@@ -3,6 +3,8 @@ require('@prisma/client');
 const app = express();
 require('dotenv').config();
 const bodyParser = require('body-parser');
+const expressValidator =   require ('express-validator')
+app.use(expressValidator())
 app.use(bodyParser.json())
  
 const userRoute=require("./routes/route.user");

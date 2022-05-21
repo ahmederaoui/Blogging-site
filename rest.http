@@ -4,8 +4,10 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "name": "yassine",
-    "email": "gdsfs@mail.com",
-    "password":"bfdsfbbbb"
+    "name": "ahmed",
+    "email": "swosdrdcom@sdfhgdf.com",
+    "password":"azahfgsdfge",
+    "ksdlkgsd" : "ljkgtlidzs"
+    
 
 }
