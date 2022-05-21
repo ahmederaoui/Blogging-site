@@ -6,8 +6,11 @@ Content-Type: application/json
 {
     "name": "ahmed",
     "email": "swosdrdcom@sdfhgdf.com",
-    "password":"azahfgsdfge",
-    "ksdlkgsd" : "ljkgtlidzs"
+    "password":"azahfgsdfge"
     
 
 }
+
+###
+DELETE  http://localhost:3000/api/users/12
+
