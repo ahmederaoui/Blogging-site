@@ -10,7 +10,8 @@ app.use(bodyParser.json())
 const userRoute=require("./routes/route.user");
 app.use("/api/",userRoute);
 
-
+const articleRoute=require("./routes/route.article");
+app.use("/api/",articleRoute);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

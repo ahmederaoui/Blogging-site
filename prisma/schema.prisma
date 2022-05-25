@@ -17,8 +17,8 @@ enum Role{
 }
 model User{
   id   Int   @id @default(autoincrement()) 
-  name  String   
-  email  String    
+  name  String   @unique
+  email  String    @unique
   password String  
   role   Role   @default(USER) 
   comments Comment[]
@@ -29,6 +29,7 @@ model User{
 model Article{
   id Int  @id @default(autoincrement())
   title String 
+  description String 
   content String @db.Text
   url     String
   createdAt  DateTime  @default(now())

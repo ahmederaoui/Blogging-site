@@ -4,13 +4,53 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "name": "ahmed",
-    "email": "swosdrdcom@sdfhgdf.com",
-    "password":"azahfgsdfge"
+    "name": "abdjhglkh",
+    "email": "abdollah@sdfhgfddf.com",
+    "password":"abdolbjhglgfguy365"
     
 
 }
 
 ###
-DELETE  http://localhost:3000/api/users/12
+DELETE  http://localhost:3000/api/users/15
+
+###
+PATCH  http://localhost:3000/api/users/15
+
+{
+    "name": "nedday",
+    "email": "nedday@sqgyrthd.com",
+    "password":"sdd213213egrdg"
+    
+
+}
+
+
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "",
+    "email": "retu@sqgyrthd.com",
+    "password":"sddsdfsdegrdg"
+    
+
+}
+
+###
+
+PATCH  http://localhost:3000/api/users/14
+Content-Type: application/json
+
+{
+    "name": "eraoui",
+    "email": "eraoui@sqezrtgyrthd.com",
+    "password":"fdgsdfgfsdqg"
+    
+
+}
+###
+GET   http://localhost:3000/api/articles
+
 
