@@ -37,7 +37,7 @@ article = {
       res.status(422).json({ errors: errors.array() });
       return;
     }
-    const {title , description , content, userId , url  }= req.body ;
+    const {title , description , content, userId , url, categories}= req.body ;
     try {
       const article = await prisma.article.create({
         data: {
@@ -48,11 +48,19 @@ article = {
           user : {
             connect :{ id : userId}
           },
-
-        },
-        
-      });
+        }
+      })
+      const tags =categories.forEach(async (value)=>{
+        await prisma.categoriesOnArticle.create({
+          data : {
+            articleId : Number(article.id),
+            categoryId : Number(value)
+          }
+        })
+      })
+      
       res.json(article);
+      res.json(tags);
     } catch (error) {
       res.json({ message: error.message });
     }

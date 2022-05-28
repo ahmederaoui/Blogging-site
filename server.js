@@ -10,6 +10,13 @@ app.use(bodyParser.json())
 const userRoute=require("./routes/route.user");
 app.use("/api/",userRoute);
 
+const categoryRoute=require("./routes/route.category");
+app.use("/api/",categoryRoute);
+
+const commentRoute=require("./routes/route.comment");
+app.use("/api/",commentRoute);
+
+
 const articleRoute=require("./routes/route.article");
 app.use("/api/",articleRoute);
 
