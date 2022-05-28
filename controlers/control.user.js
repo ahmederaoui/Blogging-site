@@ -51,7 +51,6 @@ user = {
                 email: value,
               }
             });
-            console.log(mail)
             if (mail) {
               return Promise.reject("e-mail already exist");
             }

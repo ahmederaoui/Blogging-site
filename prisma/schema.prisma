@@ -34,7 +34,7 @@ model Article{
   url     String
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
-  published Boolean    @default(false)
+  published Boolean    @default(true)
   categories CategoriesOnArticle[]
   user  User   @relation(fields: [userId], references : [id] , onDelete: Cascade)
   userId Int

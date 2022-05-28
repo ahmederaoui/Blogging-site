@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:3000/api/users/15
+DELETE  http://localhost:3000/api/users/1
 
 ###
 PATCH  http://localhost:3000/api/users/15
@@ -51,6 +51,33 @@ Content-Type: application/json
 
 }
 ###
-GET   http://localhost:3000/api/articles
+DELETE    http://localhost:3000/api/articles/2
+
+###
+POST  http://localhost:3000/api/articles
+Content-Type: application/json
+
+
+{
+    "title": "er",
+    "description" : "",
+    "url" : "",
+    "content": "ahmed eraoui est un personne qui va faire toutes ce qu'ik faut faire",
+    "userId" : 2
+
+}
+###
+get  http://localhost:3000/api/articles
+
+###
+PATCH   http://localhost:3000/api/articles/3
+Content-Type: application/json
+
+{
+
+    "published" : false
+
+}
+
 
 
