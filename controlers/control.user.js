@@ -2,6 +2,7 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 const { body } = require("express-validator/check");
 const { validationResult } = require("express-validator/check");
+const bcrypt = require("bcrypt");
 
 user = {
   getUsers: async function (req, res, next) {
@@ -57,6 +58,7 @@ user = {
           }),
           body("email", "Invalid email").exists().isEmail(),
           body("password").exists().isLength({ min: 8 }),
+          body("role").optional(),
         ];
       }
       case "updateUser": {
@@ -96,12 +98,15 @@ user = {
         res.status(422).json({ errors: errors.array() });
         return;
       }
-      const { name, email, password } = req.body;
+      const { name, email, password,role } = req.body;
+      let hashedPassword = await bcrypt.hashSync(password,10)
+      console.log(hashedPassword)
       const user = await prisma.user.create({
         data: {
           name: name,
           email: email,
-          password: password,
+          password: hashedPassword,
+          role : role ,
         },
       });
       res.json(user);

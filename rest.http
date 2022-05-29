@@ -59,11 +59,12 @@ Content-Type: application/json
 
 
 {
-    "title": "er",
-    "description" : "",
-    "url" : "",
-    "content": "ahmed eraoui est un personne qui va faire toutes ce qu'ik faut faire",
-    "userId" : 2
+    "title": "edgfsgr",
+    "description" : "gdsfg",
+    "url" : "dgsf",
+    "content": "ahmed gsdfgeraoui est un personne qui va faire toutes ce qu'ik faut faire",
+    "userId" : 3,
+    "categories" : ["1", "2"]
 
 }
 ###
@@ -90,4 +91,25 @@ Content-Type: application/json
     "articleId" : 4
 } 
 
+###
+DELETE    http://localhost:3000/api/comments/3
 
+###
+PATCH   http://localhost:3000/api/comments/4
+Content-Type: application/json
+
+
+{
+    "content" : "yassine el hanafi w anass nedday maxi rjal hhh"
+}
+
+###
+GET http://localhost:3000/api/categories
+
+###
+POST http://localhost:3000/api/categories
+Content-Type: application/json
+
+{
+    "name" : "Neflix"
+}
