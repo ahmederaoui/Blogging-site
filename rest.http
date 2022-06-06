@@ -18,9 +18,10 @@ DELETE  http://localhost:3000/api/users/1
 PATCH  http://localhost:3000/api/users/15
 
 {
-    "name": "nedday",
-    "email": "nedday@sqgyrthd.com",
-    "password":"sdd213213egrdg"
+    "name": "hrthrzh",
+    "email": "neddsdhay@sqgyrthd.com",
+    "password":"sdd213213sfdegrdg",
+    "role" :admin
     
 
 }
@@ -31,10 +32,10 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "name": "",
-    "email": "retu@sqgyrthd.com",
-    "password":"sddsdfsdegrdg"
-    
+    "name": "aftima",
+    "email": "fatima@sqgyrfzaethd.com",
+    "password":"fatimazahra",
+    "role" :"ADMIN"
 
 }
 

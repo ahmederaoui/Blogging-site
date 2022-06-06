@@ -99,8 +99,7 @@ user = {
         return;
       }
       const { name, email, password,role } = req.body;
-      let hashedPassword = await bcrypt.hashSync(password,10)
-      console.log(hashedPassword)
+      const  hashedPassword = await bcrypt.hashSync(password,10)
       const user = await prisma.user.create({
         data: {
           name: name,
